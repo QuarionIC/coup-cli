@@ -72,7 +72,8 @@ class COUP {
 	getBots(player) {
 		try {
 			this.ALLPLAYER.forEach((player) => {
-				const botPath = path.normalize(`${__dirname}/../bots/${player}/index.js`);
+				// const botPath = path.normalize(`${__dirname}/../bots/${player}/index.js`);
+				const botPath = path.normalize(`${player}/index.js`);
 				const bot = require(botPath);
 				this.BOTS[player] = new bot({ name: player });
 
